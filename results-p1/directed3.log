@@ -18,3 +18,5 @@ round 4: same failure again (0.50, best so far 0.50)
     1x  0 of 4 shapes passed. On shape=(32, 12) as 3x4: raised AssertionError: dma_copy requires src and dst to have t
 
 =========== level 3: matmul, single tile ===========
+round 0: this round 0.30  best so far 0.30  (57.7s)
+  0 of 1 shapes passed. On K=128 M=64 N=512: raised AssertionError: SBUF and PSUM tensors must have at least 2 dimensions (partition-dim and free-dim) The shape on the failing line has one dimension and a tile needs two. Putting a 1 in front is only right when the data really is a single row. Otherwise give the tile the full shape of the data it will hold: a tile that receives the result of nisa.nc_
