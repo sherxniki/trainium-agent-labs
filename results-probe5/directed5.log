@@ -1,0 +1,3 @@
+endpoint http://localhost:8000/v1  model Qwen/Qwen3-8B  feedback directed5  diverse False  commit fd3ec0e  session 20261010-205823
+
+=========== level 3: matmul, single tile ===========
