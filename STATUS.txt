@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T20:40:33Z   code a898a78 Kernel agent: directed5 quotes the line that ALLOCATES an outp
+seat seat-17   2026-10-10T20:40:36Z   code 82f0a30 Kernel agent: a second seat gets its own queue and results bra
 busy: yes   started on this seat: 200-pair1.job 205-probe1.job 206-probe2.job 2065-confirm4a.job 
 
 ==================== results-c4a ====================
@@ -124,12 +124,12 @@ round 0: this round 0.62  best so far 0.62  (65.6s)
 36181 python agent.py --data faith-unans+squad2 --n 12 --offset 0 --label-free --samples 1 --rounds 3 -q --verify checklist --log lf_check.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 36066   running for 06:12   in /root/seat17/projects/02-kernel-agent
+pid 36066   running for 06:15   in /root/seat17/projects/02-kernel-agent
    options: --levels 4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-c4a/directed4.jsonl
    log /root/seat17/projects/02-kernel-agent/results-c4a/directed4.jsonl: 12 attempts, 3 rounds done; now on run 1 of 1, level 4, round 2 (up to 8 rounds a level)
    run 1: rounds per level L4=3
    feedback mode in its records: directed4; code: 5ca7625
-pid 36181   running for 05:40   in /workspace/projects/03-hallucination-agent
+pid 36181   running for 05:43   in /workspace/projects/03-hallucination-agent
    options: --data faith-unans+squad2 --n 12 --offset 0 --label-free --samples 1 --rounds 3 -q --verify checklist --log lf_check.jso
    log /workspace/projects/03-hallucination-agent/lf_check.jsonl: 12 attempts, 5 rounds done; now on run 1 of 1, level faith-unans:not_in_context, round 2 (up to 3 rounds a level)
    run 1: rounds per level Lfaith-unans:not_in_context=3, Lsquad2:answer=2
