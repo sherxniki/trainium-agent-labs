@@ -26,3 +26,5 @@ round 2: this round 0.30  best so far 0.30  (56.6s)
   0 of 1 shapes passed. On K=128 M=64 N=512: raised ValueError: shape mismatch: value array of shape (32768,) could not be broadcast to indexing result of shape (8192,) You assigned 32768 elements into a slice that holds 8192. Assignment does not reshape or broadcast either: the slice on the left and the value on the right must have the SAME shape. If the value is bigger, you are writing a whole til
 round 3: same failure again (0.30, best so far 0.30)
   same failure 2x — adding a ledger of 3 failed attempts to break the repeat
+round 4: same failure again (0.30, best so far 0.30)
+  same failure 3x — adding a ledger of 3 failed attempts to break the repeat

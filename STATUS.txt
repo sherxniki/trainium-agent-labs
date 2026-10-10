@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T19:40:02Z   code 8d6932b Kernel agent: interim note corrected with the five-repeat loca
+seat seat-17   2026-10-10T19:41:05Z   code 8d6932b Kernel agent: interim note corrected with the five-repeat loca
 busy: yes   started on this seat: 200-pair1.job 
 
 ==================== results-p1 ====================
@@ -15,6 +15,7 @@ round 0: this round 0.30  best so far 0.30  (57.7s)
 round 1: this round 0.30  best so far 0.30  (55.4s)
 round 2: this round 0.30  best so far 0.30  (56.6s)
 round 3: same failure again (0.30, best so far 0.30)
+round 4: same failure again (0.30, best so far 0.30)
 ##### feedback=directed3 started 19:31:45
 
 ==================== processes ====================
@@ -22,8 +23,8 @@ round 3: same failure again (0.30, best so far 0.30)
 29955 python agent.py --levels 2,3,4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed3 --log results-p1/directed3.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 29955   running for 08:17   in /root/seat17/projects/02-kernel-agent
+pid 29955   running for 09:19   in /root/seat17/projects/02-kernel-agent
    options: --levels 2,3,4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed3 --log results-p1/directed3.jsonl
-   log /root/seat17/projects/02-kernel-agent/results-p1/directed3.jsonl: 36 attempts, 9 rounds done; now on run 1 of 1, level 3, round 3 (up to 8 rounds a level)
-   run 1: rounds per level L2=5, L3=4
+   log /root/seat17/projects/02-kernel-agent/results-p1/directed3.jsonl: 40 attempts, 10 rounds done; now on run 1 of 1, level 3, round 4 (up to 8 rounds a level)
+   run 1: rounds per level L2=5, L3=5
    feedback mode in its records: directed3; code: 8d6932b
