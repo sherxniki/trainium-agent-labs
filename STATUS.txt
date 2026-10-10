@@ -1,5 +1,5 @@
-seat seat-17   2026-10-10T20:06:07Z   code 61574a1 Kernel agent: probe 1 runs level 3 first, so its answer comes 
-busy: yes   started on this seat: 200-pair1.job 
+seat seat-17   2026-10-10T20:07:09Z   code 61574a1 Kernel agent: probe 1 runs level 3 first, so its answer comes 
+busy: no   started on this seat: 200-pair1.job 
 
 ==================== results-p1 ====================
 --- feedback = directed3 ---
@@ -61,12 +61,7 @@ round 3: same failure again (0.62, best so far 0.62)
 ##### ALL DONE 20:05:30
 
 ==================== processes ====================
-32957 sh -c python agent.py --data faith-unans+squad2 --n 12 --offset 0 --label-free --samples 1 --rounds 3 -q --log lf_plain.jsonl > lf_plain.txt 2>&
-32959 python agent.py --data faith-unans+squad2 --n 12 --offset 0 --label-free --samples 1 --rounds 3 -q --log lf_plain.jsonl
+33046 watch -n 60 pgrep -af "agent.py" | grep -o "log lf_[a-z]*" ; wc -l lf_plain.jsonl lf_verify.jsonl 2>/dev/null
 
 ==================== agents on this chip: how far along ====================
-pid 32959   running for 00:21   in /workspace/projects/03-hallucination-agent
-   options: --data faith-unans+squad2 --n 12 --offset 0 --label-free --samples 1 --rounds 3 -q --log lf_plain.jsonl
-   log /workspace/projects/03-hallucination-agent/lf_plain.jsonl: 8 attempts, 3 rounds done; now on run 1 of 1, level faith-unans:not_in_context, round 0 (up to 3 rounds a level)
-   run 1: rounds per level Lfaith-unans:not_in_context=1, Lsquad2:answer=2
-   feedback mode in its records: not recorded; code: not recorded
+none
