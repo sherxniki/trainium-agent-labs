@@ -1,0 +1,5 @@
+endpoint http://localhost:8000/v1  model Qwen/Qwen3-8B  feedback enriched  diverse False  commit fd3ec0e  session 20261010-205740
+
+=========== level 4: matmul, tiled ===========
+the endpoint returned HTTP 404:
+{"error":{"message":"The model `Qwen/Qwen3-8B` does not exist.","type":"NotFoundError","param":"model","code":404}}
