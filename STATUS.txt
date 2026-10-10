@@ -1,11 +1,11 @@
-seat seat-17   2026-10-10T19:29:37Z   code 8d6932b Kernel agent: interim note corrected with the five-repeat loca
+seat seat-17   2026-10-10T19:30:40Z   code 8d6932b Kernel agent: interim note corrected with the five-repeat loca
 busy: yes   started on this seat: 
 
 ==================== processes ====================
 17172 python agent.py --all --rounds 8 --samples 4 --context 8192 --repeat 5 --log baseline.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 17172   running for 02:55:09   in /workspace/projects/02-kernel-agent
+pid 17172   running for 02:56:11   in /workspace/projects/02-kernel-agent
    options: --all --rounds 8 --samples 4 --context 8192 --repeat 5 --log baseline.jsonl
    its log was DELETED while it runs; reading the open handle, copy kept in /root/seat17/projects/02-kernel-agent/rescued/17172-baseline.jsonl
    log /workspace/projects/02-kernel-agent/baseline.jsonl: 480 attempts, 120 rounds done; now on run 5 of 5, level 4, round 4 (up to 8 rounds a level)
