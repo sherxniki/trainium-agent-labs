@@ -90,3 +90,8 @@ round 1: this round 0.50  best so far 0.50  (47.1s)
   at index (24, 9): expected +2.62617, got -1.9109
   81.8% of elements are outside tolerance
   most elements are wrong, so this is the core arithmetic or the operand layout, not an edge case Nothing is computed in this task: the correct output holds exactly the values of
+round 2: this round 0.50  best so far 0.50  (46.9s)
+  0 of 4 shapes passed. On shape=(32, 12) as 3x4: NUMERICAL MISMATCH: worst error 4.49 of the output's RMS (1.01), tolerance 0.02.
+  at index (24, 9): expected +2.62617, got -1.9109
+  81.8% of elements are outside tolerance
+  most elements are wrong, so this is the core arithmetic or the operand layout, not an edge case Nothing is computed in this task: the correct output holds exactly the values of

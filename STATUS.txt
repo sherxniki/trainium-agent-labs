@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T20:20:43Z   code 5912b76 Kernel agent: note header says Team 36, at the team's request
+seat seat-17   2026-10-10T20:21:46Z   code 5912b76 Kernel agent: note header says Team 36, at the team's request
 busy: yes   started on this seat: 200-pair1.job 205-probe1.job 
 
 ==================== results-p1 ====================
@@ -79,17 +79,17 @@ round 4: this round 1.00  best so far 1.00  (110.5s)
 =========== level 2: 2D transpose ===========
 round 0: this round 0.30  best so far 0.30  (46.0s)
 round 1: this round 0.50  best so far 0.50  (47.1s)
+round 2: this round 0.50  best so far 0.50  (46.9s)
 ##### feedback=directed4 started 20:07:12
 
 ==================== processes ====================
-33046 watch -n 60 pgrep -af "agent.py" | grep -o "log lf_[a-z]*" ; wc -l lf_plain.jsonl lf_verify.jsonl 2>/dev/null
 33219 bash /root/seat17/projects/02-kernel-agent/go.sh _run
 33225 python agent.py --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 33225   running for 13:31   in /root/seat17/projects/02-kernel-agent
+pid 33225   running for 14:33   in /root/seat17/projects/02-kernel-agent
    options: --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.json
-   log /root/seat17/projects/02-kernel-agent/results-probe1/directed4.jsonl: 48 attempts, 12 rounds done; now on run 2 of 1, level 2, round 1 (up to 8 rounds a level)
+   log /root/seat17/projects/02-kernel-agent/results-probe1/directed4.jsonl: 52 attempts, 13 rounds done; now on run 2 of 1, level 2, round 2 (up to 8 rounds a level)
    run 1: rounds per level L3=5, L4=5
-   run 2: rounds per level L2=2
+   run 2: rounds per level L2=3
    feedback mode in its records: directed4; code: 61574a1
