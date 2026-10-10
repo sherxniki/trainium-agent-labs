@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T19:50:28Z   code 4b5dfe3 Kernel agent: complete five-repeat located log in the submissi
+seat seat-17   2026-10-10T19:51:31Z   code 4b5dfe3 Kernel agent: complete five-repeat located log in the submissi
 busy: yes   started on this seat: 200-pair1.job 
 
 ==================== results-p1 ====================
@@ -24,15 +24,23 @@ round 1: this round 0.62  best so far 0.62  (91.4s)
 round 2: this round 0.50  best so far 0.62  (100.4s)
 round 3: same failure again (0.50, best so far 0.62)
 round 4: same failure again (0.50, best so far 0.62)
+round 5: same failure again (0.50, best so far 0.62)
+  STOPPING this level: the identical failure 4 rounds running. The agent is cycling between a fixed set of mis
+  level 2  reward 0.50 after 5 round(s)
+  level 3  reward 0.30 after 6 round(s)
+  level 4  reward 0.62 after 6 round(s)
+  solved 0/3
+--- feedback = enriched ---
+=========== level 2: 2D transpose ===========
 ##### feedback=directed3 started 19:31:45
+##### feedback=directed3 finished 19:50:43 (exit 0)
+##### feedback=enriched started 19:50:43
 
 ==================== processes ====================
 29949 bash /root/seat17/projects/02-kernel-agent/go.sh _run
-29955 python agent.py --levels 2,3,4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed3 --log results-p1/directed3.jsonl
+31634 python agent.py --levels 2,3,4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback enriched --log results-p1/enriched.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 29955   running for 18:43   in /root/seat17/projects/02-kernel-agent
-   options: --levels 2,3,4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed3 --log results-p1/directed3.jsonl
-   log /root/seat17/projects/02-kernel-agent/results-p1/directed3.jsonl: 64 attempts, 16 rounds done; now on run 1 of 1, level 4, round 4 (up to 8 rounds a level)
-   run 1: rounds per level L2=5, L3=6, L4=5
-   feedback mode in its records: directed3; code: 8d6932b
+pid 31634   running for 00:48   in /root/seat17/projects/02-kernel-agent
+   options: --levels 2,3,4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback enriched --log results-p1/enriched.jsonl
+   log /root/seat17/projects/02-kernel-agent/results-p1/enriched.jsonl: empty so far

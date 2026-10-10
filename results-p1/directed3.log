@@ -45,3 +45,16 @@ round 3: same failure again (0.50, best so far 0.62)
   same failure 2x — adding a ledger of 3 failed attempts to break the repeat
 round 4: same failure again (0.50, best so far 0.62)
   same failure 3x — adding a ledger of 3 failed attempts to break the repeat
+round 5: same failure again (0.50, best so far 0.62)
+  STOPPING this level: the identical failure 4 rounds running. The agent is cycling between a fixed set of mistakes rather than converging, so more rounds will not help. Failures seen:
+    4x  0 of 4 shapes passed. On K=128 M=128 N=512: NON-FINITE OUTPUT: 65536 NaN and 0 Inf, first at (0, 0). Every one
+    1x  1 of 4 shapes passed. On K=256 M=256 N=1024: raised AssertionError: dma_copy dst partition dimension 256 excee
+    1x  1 of 4 shapes passed. On K=256 M=256 N=1024: raised AssertionError: Matmul contraction dimension 256 exceeds p
+
+=========== summary ===========
+  level 2  reward 0.50 after 5 round(s)
+  level 3  reward 0.30 after 6 round(s)
+  level 4  reward 0.62 after 6 round(s)
+  solved 0/3
+
+attempts logged to results-p1/directed3.jsonl
