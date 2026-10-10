@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T20:15:30Z   code 61574a1 Kernel agent: probe 1 runs level 3 first, so its answer comes 
+seat seat-17   2026-10-10T20:16:33Z   code 61574a1 Kernel agent: probe 1 runs level 3 first, so its answer comes 
 busy: yes   started on this seat: 200-pair1.job 205-probe1.job 
 
 ==================== results-p1 ====================
@@ -81,7 +81,7 @@ round 2: this round 0.50  best so far 0.62  (96.8s)
 33225 python agent.py --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 33225   running for 08:17   in /root/seat17/projects/02-kernel-agent
+pid 33225   running for 09:20   in /root/seat17/projects/02-kernel-agent
    options: --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.json
    log /root/seat17/projects/02-kernel-agent/results-probe1/directed4.jsonl: 32 attempts, 8 rounds done; now on run 1 of 1, level 4, round 2 (up to 8 rounds a level)
    run 1: rounds per level L3=5, L4=3
