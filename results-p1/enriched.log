@@ -32,3 +32,5 @@ round 0: this round 0.62  best so far 0.62  (79.1s)
   1 of 4 shapes passed. On K=256 M=256 N=1024: raised AssertionError: dma_copy dst partition dimension 256 exceeds maximum 128 A tile may have at most 128 rows, and you asked for 256. Do not allocate one tile for the whole tensor: loop over the partition dimension in chunks of at most 128 with nl.affine_range, allocate the tile inside the loop with the chunk's own size, and copy one chunk at a time,
 round 1: same failure again (0.62, best so far 0.62)
   same failure 2x — adding a ledger of 1 failed attempts to break the repeat
+round 2: same failure again (0.62, best so far 0.62)
+  same failure 3x — adding a ledger of 1 failed attempts to break the repeat
