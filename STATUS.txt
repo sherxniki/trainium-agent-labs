@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T21:02:31Z   code fd3ec0e Kernel agent: one more level 3 attempt, now that the last faul
+seat seat-17   2026-10-10T21:03:33Z   code fd3ec0e Kernel agent: one more level 3 attempt, now that the last faul
 busy: yes   started on this seat: 200-pair1.job 205-probe1.job 206-probe2.job 2065-confirm4a.job 20655-probe3.job 20656-probe5.job 
 
 ==================== results-c4a ====================
@@ -152,15 +152,21 @@ round 7: same failure again (0.30, best so far 0.30)
 round 0: this round 0.30  best so far 0.30  (71.3s)
 round 1: same failure again (0.30, best so far 0.30)
 round 2: this round 0.30  best so far 0.30  (69.8s)
+round 3: this round 0.30  best so far 0.30  (74.8s)
 ##### feedback=directed5 started 20:58:23
 
 ==================== processes ====================
 39529 bash /root/seat17/projects/02-kernel-agent/go.sh _run
 39535 python agent.py --levels 3 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed5 --log results-probe5/directed5.jsonl
+40126 sh -c python agent.py --data faith-unans+squad2 --n 40 --offset 12 --label-free --samples 1 --rounds 3 --workers 4 -q                           
+40127 python agent.py --data faith-unans+squad2 --n 40 --offset 12 --label-free --samples 1 --rounds 3 --workers 4 -q --log t_plain.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 39535   running for 04:07   in /root/seat17/projects/02-kernel-agent
+pid 39535   running for 05:10   in /root/seat17/projects/02-kernel-agent
    options: --levels 3 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed5 --log results-probe5/directed5.jsonl
-   log /root/seat17/projects/02-kernel-agent/results-probe5/directed5.jsonl: 12 attempts, 3 rounds done; now on run 1 of 1, level 3, round 2 (up to 8 rounds a level)
-   run 1: rounds per level L3=3
+   log /root/seat17/projects/02-kernel-agent/results-probe5/directed5.jsonl: 16 attempts, 4 rounds done; now on run 1 of 1, level 3, round 3 (up to 8 rounds a level)
+   run 1: rounds per level L3=4
    feedback mode in its records: directed5; code: fd3ec0e
+pid 40127   running for 00:17   in /workspace/projects/03-hallucination-agent
+   options: --data faith-unans+squad2 --n 40 --offset 12 --label-free --samples 1 --rounds 3 --workers 4 -q --log t_plain.jsonl
+   log /workspace/projects/03-hallucination-agent/t_plain.jsonl: empty so far
