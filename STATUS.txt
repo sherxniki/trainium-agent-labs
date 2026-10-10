@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T20:05:05Z   code 61574a1 Kernel agent: probe 1 runs level 3 first, so its answer comes 
+seat seat-17   2026-10-10T20:06:07Z   code 61574a1 Kernel agent: probe 1 runs level 3 first, so its answer comes 
 busy: yes   started on this seat: 200-pair1.job 
 
 ==================== results-p1 ====================
@@ -49,24 +49,24 @@ round 5: same failure again (0.30, best so far 0.30)
 round 0: this round 0.62  best so far 0.62  (79.1s)
 round 1: same failure again (0.62, best so far 0.62)
 round 2: same failure again (0.62, best so far 0.62)
-##### feedback=directed3 started 19:31:45
+round 3: same failure again (0.62, best so far 0.62)
+  STOPPING this level: the identical failure 4 rounds running. The agent is cycling between a fixed set of mis
+  level 2  reward 0.30 after 4 round(s)
+  level 3  reward 0.30 after 6 round(s)
+  level 4  reward 0.62 after 4 round(s)
+  solved 0/3
 ##### feedback=directed3 finished 19:50:43 (exit 0)
 ##### feedback=enriched started 19:50:43
+##### feedback=enriched finished 20:05:30 (exit 0)
+##### ALL DONE 20:05:30
 
 ==================== processes ====================
-29949 bash /root/seat17/projects/02-kernel-agent/go.sh _run
-31634 python agent.py --levels 2,3,4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback enriched --log results-p1/enriched.jsonl
-32264 sh -c python agent.py --data faith-unans+squad2 --n 12 --offset 0 --label-free --samples 1 --rounds 3 -q --log lf_plain.jsonl > lf_plain.txt 2>&
-32265 python agent.py --data faith-unans+squad2 --n 12 --offset 0 --label-free --samples 1 --rounds 3 -q --log lf_plain.jsonl
+32957 sh -c python agent.py --data faith-unans+squad2 --n 12 --offset 0 --label-free --samples 1 --rounds 3 -q --log lf_plain.jsonl > lf_plain.txt 2>&
+32959 python agent.py --data faith-unans+squad2 --n 12 --offset 0 --label-free --samples 1 --rounds 3 -q --log lf_plain.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 31634   running for 14:21   in /root/seat17/projects/02-kernel-agent
-   options: --levels 2,3,4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback enriched --log results-p1/enriched.jsonl
-   log /root/seat17/projects/02-kernel-agent/results-p1/enriched.jsonl: 52 attempts, 13 rounds done; now on run 1 of 1, level 4, round 2 (up to 8 rounds a level)
-   run 1: rounds per level L2=4, L3=6, L4=3
-   feedback mode in its records: enriched; code: 4b5dfe3
-pid 32265   running for 07:18   in /workspace/projects/03-hallucination-agent
+pid 32959   running for 00:21   in /workspace/projects/03-hallucination-agent
    options: --data faith-unans+squad2 --n 12 --offset 0 --label-free --samples 1 --rounds 3 -q --log lf_plain.jsonl
-   log /workspace/projects/03-hallucination-agent/lf_plain.jsonl: 9 attempts, 3 rounds done; now on run 1 of 1, level squad2:answer, round 0 (up to 3 rounds a level)
+   log /workspace/projects/03-hallucination-agent/lf_plain.jsonl: 8 attempts, 3 rounds done; now on run 1 of 1, level faith-unans:not_in_context, round 0 (up to 3 rounds a level)
    run 1: rounds per level Lfaith-unans:not_in_context=1, Lsquad2:answer=2
    feedback mode in its records: not recorded; code: not recorded
