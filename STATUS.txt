@@ -1,10 +1,11 @@
-seat seat-36   2026-10-10T20:43:32Z   code d9bc47f Kernel agent: on the second seat, the level 3 attempt runs sec
+seat seat-36   2026-10-10T20:44:34Z   code d9bc47f Kernel agent: on the second seat, the level 3 attempt runs sec
 busy: yes   started on this seat: 
 
 ==================== processes ====================
-45743 python agent.py --levels 1-10 --out runs/H_restarts
+51057 bash /root/team17/projects/02-kernel-agent/go.sh _run
+51063 python agent.py --levels 4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-s36-c4c/directed4.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 45743   running for 10:04   in /workspace/projects/02-kernel-agent/stage_a
-   options: --levels 1-10 --out runs/H_restarts
-   no --log option, so its progress cannot be read
+pid 51063   running for 00:05   in /root/team17/projects/02-kernel-agent
+   options: --levels 4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-s36-c4c/directed4.jsonl
+   log /root/team17/projects/02-kernel-agent/results-s36-c4c/directed4.jsonl: empty so far
