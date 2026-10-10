@@ -103,3 +103,4 @@
 It keeps going if your connection drops. Expect roughly 10-15 minutes per mode.
   See progress, and the summary when it is done:   bash go.sh status
   Watch it live (Ctrl+C stops watching only):      tail -f results-p1/*.log
+19:32:47 results: pushed

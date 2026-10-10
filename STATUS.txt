@@ -1,10 +1,11 @@
-seat seat-17   2026-10-10T19:32:45Z   code 8d6932b Kernel agent: interim note corrected with the five-repeat loca
+seat seat-17   2026-10-10T19:33:47Z   code 8d6932b Kernel agent: interim note corrected with the five-repeat loca
 busy: yes   started on this seat: 200-pair1.job 
 
 ==================== results-p1 ====================
 --- feedback = directed3 ---
 =========== level 2: 2D transpose ===========
 round 0: this round 0.30  best so far 0.30  (47.8s)
+round 1: this round 0.50  best so far 0.50  (46.8s)
 ##### feedback=directed3 started 19:31:45
 
 ==================== processes ====================
@@ -12,8 +13,8 @@ round 0: this round 0.30  best so far 0.30  (47.8s)
 29955 python agent.py --levels 2,3,4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed3 --log results-p1/directed3.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 29955   running for 01:00   in /root/seat17/projects/02-kernel-agent
+pid 29955   running for 02:02   in /root/seat17/projects/02-kernel-agent
    options: --levels 2,3,4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed3 --log results-p1/directed3.jsonl
-   log /root/seat17/projects/02-kernel-agent/results-p1/directed3.jsonl: 4 attempts, 1 rounds done; now on run 1 of 1, level 2, round 0 (up to 8 rounds a level)
-   run 1: rounds per level L2=1
+   log /root/seat17/projects/02-kernel-agent/results-p1/directed3.jsonl: 8 attempts, 2 rounds done; now on run 1 of 1, level 2, round 1 (up to 8 rounds a level)
+   run 1: rounds per level L2=2
    feedback mode in its records: directed3; code: 8d6932b
