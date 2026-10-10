@@ -168,3 +168,13 @@ It keeps going if your connection drops. Expect roughly 10-15 minutes per mode.
 20:21:48 results: pushed
 20:22:50 results: pushed
 20:22:51 code: 5912b76 -> ccfd2d3
+20:23:53 results: pushed
+20:23:54 queue: starting 206-probe2.job  ->  results-probe2  modes 'directed5'  repeat 1  args '--levels 3,4,2 --rounds 8 --samples 4 --context 8192'
+[1/3] The model is already answering at http://localhost:8000.
+[2/3] Proving the checker (nkibench --selftest)...
+      passed. (full output: results-probe2/selftest.log)
+[3/3] Started in the background: modes 'directed5', 1 runs each.
+
+It keeps going if your connection drops. Expect roughly 10-15 minutes per mode.
+  See progress, and the summary when it is done:   bash go.sh status
+  Watch it live (Ctrl+C stops watching only):      tail -f results-probe2/*.log
