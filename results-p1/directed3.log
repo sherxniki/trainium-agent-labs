@@ -8,3 +8,5 @@ round 1: this round 0.50  best so far 0.50  (46.8s)
   at index (24, 9): expected +2.62617, got -1.9109
   81.8% of elements are outside tolerance
   most elements are wrong, so this is the core arithmetic or the operand layout, not an edge case
+round 2: same failure again (0.50, best so far 0.50)
+  same failure 2x — adding a ledger of 2 failed attempts to break the repeat
