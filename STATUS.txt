@@ -1,5 +1,5 @@
-seat seat-17   2026-10-10T20:22:48Z   code 5912b76 Kernel agent: note header says Team 36, at the team's request
-busy: yes   started on this seat: 200-pair1.job 205-probe1.job 
+seat seat-17   2026-10-10T20:23:51Z   code ccfd2d3 Kernel agent: queue two confirming runs of directed4 on level 
+busy: no   started on this seat: 200-pair1.job 205-probe1.job 
 
 ==================== results-p1 ====================
 --- feedback = directed3 ---
@@ -82,16 +82,17 @@ round 1: this round 0.50  best so far 0.50  (47.1s)
 round 2: this round 0.50  best so far 0.50  (46.9s)
 round 3: same failure again (0.50, best so far 0.50)
 round 4: same failure again (0.50, best so far 0.50)
+round 5: same failure again (0.50, best so far 0.50)
+  STOPPING this level: the identical failure 4 rounds running. The agent is cycling between a fixed set of mis
+  level 3  reward 0.30 after 5 round(s)
+  level 4  reward 1.00 after 5 round(s)  SOLVED
+  level 2  reward 0.50 after 6 round(s)
+  solved 1/3
 ##### feedback=directed4 started 20:07:12
+##### feedback=directed4 finished 20:23:26 (exit 0)
+##### ALL DONE 20:23:26
 
 ==================== processes ====================
-33219 bash /root/seat17/projects/02-kernel-agent/go.sh _run
-33225 python agent.py --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 33225   running for 15:36   in /root/seat17/projects/02-kernel-agent
-   options: --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.json
-   log /root/seat17/projects/02-kernel-agent/results-probe1/directed4.jsonl: 60 attempts, 15 rounds done; now on run 2 of 1, level 2, round 4 (up to 8 rounds a level)
-   run 1: rounds per level L3=5, L4=5
-   run 2: rounds per level L2=5
-   feedback mode in its records: directed4; code: 61574a1
+none
