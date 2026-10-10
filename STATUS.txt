@@ -1,0 +1,7 @@
+seat seat-15   2026-10-10T20:55:31Z   code cc9facc Kernel agent: a queue for a third seat
+busy: no   started on this seat: 
+
+==================== processes ====================
+
+==================== agents on this chip: how far along ====================
+none
