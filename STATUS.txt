@@ -1,5 +1,12 @@
-seat seat-15   2026-10-10T20:56:34Z   code cc9facc Kernel agent: a queue for a third seat
-busy: no   started on this seat: 400-level4.job 
+seat seat-15   2026-10-10T20:57:36Z   code cc9facc Kernel agent: a queue for a third seat
+busy: no   started on this seat: 400-level4.job 410-level3.job 
+
+==================== results-s15-l3a ====================
+--- feedback = directed5 ---
+=========== level 3: matmul, single tile ===========
+##### feedback=directed5 started 20:56:36
+##### feedback=directed5 finished 20:56:37 (exit 0)
+##### ALL DONE 20:56:37
 
 ==================== results-s15-l4a ====================
 --- feedback = directed5 ---
