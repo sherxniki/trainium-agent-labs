@@ -1,3 +1,5 @@
 endpoint http://localhost:8000/v1  model Qwen/Qwen3-8B  feedback enriched  diverse False  commit 4b5dfe3  session 20261010-195043
 
 =========== level 2: 2D transpose ===========
+round 0: this round 0.30  best so far 0.30  (63.4s)
+  0 of 4 shapes passed. On shape=(32, 12) as 3x4: raised AssertionError: dma_copy requires src and dst to have the same number of elements, got src=384, dst=16384 The tile you allocated holds 16384 elements but you copied 384 into it. nisa.dma_copy does not slice or broadcast: allocate the destination with EXACTLY the shape of the slice you are moving. If you want a 128x512 piece of a bigger tensor,
