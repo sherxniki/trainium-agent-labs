@@ -1,10 +1,10 @@
-seat seat-36   2026-10-10T20:53:57Z   code b7d2601 Kernel agent: directed5 answers 'dma_copy requires HBM or SBUF
+seat seat-36   2026-10-10T20:54:59Z   code b7d2601 Kernel agent: directed5 answers 'dma_copy requires HBM or SBUF
 busy: yes   started on this seat: 
 
 ==================== processes ====================
 51414 python agent.py --levels 1-10 --out runs/J_final
 
 ==================== agents on this chip: how far along ====================
-pid 51414   running for 07:46   in /workspace/projects/02-kernel-agent/stage_a
+pid 51414   running for 08:48   in /workspace/projects/02-kernel-agent/stage_a
    options: --levels 1-10 --out runs/J_final
    no --log option, so its progress cannot be read
