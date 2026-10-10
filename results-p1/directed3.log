@@ -24,3 +24,5 @@ round 1: this round 0.30  best so far 0.30  (55.4s)
   0 of 1 shapes passed. On K=128 M=64 N=512: raised ValueError: cannot reshape array of size 32768 into shape (1,64) Your code does not call reshape, and removing one will not help. This is raised inside the NKI call on the failing line: its result has 32768 elements and the destination tile you gave it has shape (1, 64), which holds 64. The destination has the wrong shape. For nisa.nc_matmul with s
 round 2: this round 0.30  best so far 0.30  (56.6s)
   0 of 1 shapes passed. On K=128 M=64 N=512: raised ValueError: shape mismatch: value array of shape (32768,) could not be broadcast to indexing result of shape (8192,) You assigned 32768 elements into a slice that holds 8192. Assignment does not reshape or broadcast either: the slice on the left and the value on the right must have the SAME shape. If the value is bigger, you are writing a whole til
+round 3: same failure again (0.30, best so far 0.30)
+  same failure 2x — adding a ledger of 3 failed attempts to break the repeat
