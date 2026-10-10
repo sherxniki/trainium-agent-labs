@@ -1,5 +1,5 @@
-seat seat-17   2026-10-10T20:33:15Z   code 5ca7625 Kernel agent: deadline moved to 5:30 pm, so the remaining base
-busy: yes   started on this seat: 200-pair1.job 205-probe1.job 206-probe2.job 
+seat seat-17   2026-10-10T20:34:17Z   code 5ca7625 Kernel agent: deadline moved to 5:30 pm, so the remaining base
+busy: no   started on this seat: 200-pair1.job 205-probe1.job 206-probe2.job 
 
 ==================== results-p1 ====================
 --- feedback = directed3 ---
@@ -105,15 +105,12 @@ round 6: same failure again (0.30, best so far 0.30)
 round 7: this round 0.30  best so far 0.30  (56.0s)
   not solved in 8 rounds; best reward 0.30
 =========== level 4: matmul, tiled ===========
+round 0: this round 0.62  best so far 0.62  (65.6s)
 ##### feedback=directed5 started 20:23:54
+##### feedback=directed5 finished 20:34:06 (exit 0)
+##### ALL DONE 20:34:06
 
 ==================== processes ====================
-34927 bash /root/seat17/projects/02-kernel-agent/go.sh _run
-34933 python agent.py --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed5 --log results-probe2/directed5.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 34933   running for 09:20   in /root/seat17/projects/02-kernel-agent
-   options: --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed5 --log results-probe2/directed5.json
-   log /root/seat17/projects/02-kernel-agent/results-probe2/directed5.jsonl: 32 attempts, 8 rounds done; now on run 1 of 1, level 3, round 7 (up to 8 rounds a level)
-   run 1: rounds per level L3=8
-   feedback mode in its records: directed5; code: ccfd2d3
+none
