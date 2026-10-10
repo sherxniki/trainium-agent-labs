@@ -12,3 +12,5 @@ round 3: same failure again (0.30, best so far 0.30)
     4x  0 of 4 shapes passed. On shape=(32, 12) as 3x4: raised AssertionError: dma_copy requires src and dst to have t
 
 =========== level 3: matmul, single tile ===========
+round 0: this round 0.30  best so far 0.30  (57.6s)
+  0 of 1 shapes passed. On K=128 M=64 N=512: raised AssertionError: SBUF and PSUM tensors must have at least 2 dimensions (partition-dim and free-dim) Every SBUF and PSUM tile needs two dimensions: a partition dimension first, then a free dimension. A 1-D tile is not allowed, so write nl.ndarray((rows, cols), ...) and give a length-N vector the shape (1, N) or (N, 1) depending on which axis you are 
