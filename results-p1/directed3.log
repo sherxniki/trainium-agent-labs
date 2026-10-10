@@ -43,3 +43,5 @@ round 2: this round 0.50  best so far 0.62  (100.4s)
   0 of 4 shapes passed. On K=128 M=128 N=512: NON-FINITE OUTPUT: 65536 NaN and 0 Inf, first at (0, 0). Every one of the 65536 output elements is non-finite, which means the array you return was never written: no line copies a result into it. This is not about initialising a tile, and no function for that exists. After the computation, copy the result into the array you return with nisa.dma_copy(dst=
 round 3: same failure again (0.50, best so far 0.62)
   same failure 2x — adding a ledger of 3 failed attempts to break the repeat
+round 4: same failure again (0.50, best so far 0.62)
+  same failure 3x — adding a ledger of 3 failed attempts to break the repeat
