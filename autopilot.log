@@ -198,3 +198,5 @@ It keeps going if your connection drops. Expect roughly 10-15 minutes per mode.
 It keeps going if your connection drops. Expect roughly 10-15 minutes per mode.
   See progress, and the summary when it is done:   bash go.sh status
   Watch it live (Ctrl+C stops watching only):      tail -f results-c4a/*.log
+20:35:22 results: pushed
+20:35:23 code: 5ca7625 -> a898a78
