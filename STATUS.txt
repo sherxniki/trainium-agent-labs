@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T19:55:40Z   code 4b5dfe3 Kernel agent: complete five-repeat located log in the submissi
+seat seat-17   2026-10-10T19:56:43Z   code 4b5dfe3 Kernel agent: complete five-repeat located log in the submissi
 busy: yes   started on this seat: 200-pair1.job 
 
 ==================== results-p1 ====================
@@ -39,6 +39,7 @@ round 3: same failure again (0.30, best so far 0.30)
   STOPPING this level: the identical failure 4 rounds running. The agent is cycling between a fixed set of mis
 =========== level 3: matmul, single tile ===========
 round 0: this round 0.30  best so far 0.30  (57.6s)
+round 1: same failure again (0.30, best so far 0.30)
 ##### feedback=directed3 started 19:31:45
 ##### feedback=directed3 finished 19:50:43 (exit 0)
 ##### feedback=enriched started 19:50:43
@@ -48,8 +49,8 @@ round 0: this round 0.30  best so far 0.30  (57.6s)
 31634 python agent.py --levels 2,3,4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback enriched --log results-p1/enriched.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 31634   running for 04:57   in /root/seat17/projects/02-kernel-agent
+pid 31634   running for 06:00   in /root/seat17/projects/02-kernel-agent
    options: --levels 2,3,4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback enriched --log results-p1/enriched.jsonl
-   log /root/seat17/projects/02-kernel-agent/results-p1/enriched.jsonl: 20 attempts, 5 rounds done; now on run 1 of 1, level 3, round 0 (up to 8 rounds a level)
-   run 1: rounds per level L2=4, L3=1
+   log /root/seat17/projects/02-kernel-agent/results-p1/enriched.jsonl: 24 attempts, 6 rounds done; now on run 1 of 1, level 3, round 1 (up to 8 rounds a level)
+   run 1: rounds per level L2=4, L3=2
    feedback mode in its records: enriched; code: 4b5dfe3
