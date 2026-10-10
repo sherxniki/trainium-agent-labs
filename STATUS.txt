@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T20:53:07Z   code b7d2601 Kernel agent: directed5 answers 'dma_copy requires HBM or SBUF
+seat seat-17   2026-10-10T20:54:09Z   code b7d2601 Kernel agent: directed5 answers 'dma_copy requires HBM or SBUF
 busy: yes   started on this seat: 200-pair1.job 205-probe1.job 206-probe2.job 2065-confirm4a.job 20655-probe3.job 
 
 ==================== results-c4a ====================
@@ -134,6 +134,7 @@ round 0: this round 0.62  best so far 0.62  (65.6s)
 round 0: this round 0.30  best so far 0.30  (57.9s)
 round 1: this round 0.30  best so far 0.30  (58.9s)
 round 2: this round 0.30  best so far 0.30  (61.1s)
+round 3: this round 0.30  best so far 0.30  (60.9s)
 ##### feedback=directed5 started 20:50:02
 
 ==================== processes ====================
@@ -141,8 +142,8 @@ round 2: this round 0.30  best so far 0.30  (61.1s)
 38355 python agent.py --levels 3 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed5 --log results-probe3/directed5.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 38355   running for 03:05   in /root/seat17/projects/02-kernel-agent
+pid 38355   running for 04:07   in /root/seat17/projects/02-kernel-agent
    options: --levels 3 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed5 --log results-probe3/directed5.jsonl
-   log /root/seat17/projects/02-kernel-agent/results-probe3/directed5.jsonl: 12 attempts, 3 rounds done; now on run 1 of 1, level 3, round 2 (up to 8 rounds a level)
-   run 1: rounds per level L3=3
+   log /root/seat17/projects/02-kernel-agent/results-probe3/directed5.jsonl: 16 attempts, 4 rounds done; now on run 1 of 1, level 3, round 3 (up to 8 rounds a level)
+   run 1: rounds per level L3=4
    feedback mode in its records: directed5; code: d9bc47f
