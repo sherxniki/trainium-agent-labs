@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T20:24:54Z   code ccfd2d3 Kernel agent: queue two confirming runs of directed4 on level 
+seat seat-17   2026-10-10T20:25:57Z   code ccfd2d3 Kernel agent: queue two confirming runs of directed4 on level 
 busy: yes   started on this seat: 200-pair1.job 205-probe1.job 206-probe2.job 
 
 ==================== results-p1 ====================
@@ -96,6 +96,7 @@ round 5: same failure again (0.50, best so far 0.50)
 --- feedback = directed5 ---
 =========== level 3: matmul, single tile ===========
 round 0: this round 0.30  best so far 0.30  (58.0s)
+round 1: this round 0.30  best so far 0.30  (58.8s)
 ##### feedback=directed5 started 20:23:54
 
 ==================== processes ====================
@@ -103,8 +104,8 @@ round 0: this round 0.30  best so far 0.30  (58.0s)
 34933 python agent.py --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed5 --log results-probe2/directed5.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 34933   running for 01:00   in /root/seat17/projects/02-kernel-agent
+pid 34933   running for 02:02   in /root/seat17/projects/02-kernel-agent
    options: --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed5 --log results-probe2/directed5.json
-   log /root/seat17/projects/02-kernel-agent/results-probe2/directed5.jsonl: 4 attempts, 1 rounds done; now on run 1 of 1, level 3, round 0 (up to 8 rounds a level)
-   run 1: rounds per level L3=1
+   log /root/seat17/projects/02-kernel-agent/results-probe2/directed5.jsonl: 8 attempts, 2 rounds done; now on run 1 of 1, level 3, round 1 (up to 8 rounds a level)
+   run 1: rounds per level L3=2
    feedback mode in its records: directed5; code: ccfd2d3
