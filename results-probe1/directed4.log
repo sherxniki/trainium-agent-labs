@@ -85,3 +85,8 @@ round 4: this round 1.00  best so far 1.00  (110.5s)
 =========== level 2: 2D transpose ===========
 round 0: this round 0.30  best so far 0.30  (46.0s)
   0 of 4 shapes passed. On shape=(32, 12) as 3x4: raised AssertionError: dma_copy requires src and dst to have the same number of elements, got src=384, dst=512 The destination has shape (128, 4) but the piece copied into it has shape (32, 12), which is smaller. nisa.dma_copy needs IDENTICAL shapes and cannot fill part of a tile. Allocate a separate tile for this copy with exactly the source's shape
+round 1: this round 0.50  best so far 0.50  (47.1s)
+  0 of 4 shapes passed. On shape=(32, 12) as 3x4: NUMERICAL MISMATCH: worst error 4.49 of the output's RMS (1.01), tolerance 0.02.
+  at index (24, 9): expected +2.62617, got -1.9109
+  81.8% of elements are outside tolerance
+  most elements are wrong, so this is the core arithmetic or the operand layout, not an edge case Nothing is computed in this task: the correct output holds exactly the values of
