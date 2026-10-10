@@ -1,16 +1,16 @@
-seat seat-17   2026-10-10T18:45:49Z   code 46057f5 Kernel agent: send the rescued log to the fork with the other 
+seat seat-17   2026-10-10T18:46:51Z   code 46057f5 Kernel agent: send the rescued log to the fork with the other 
 busy: yes   started on this seat: 
 
 ==================== processes ====================
 17172 python agent.py --all --rounds 8 --samples 4 --context 8192 --repeat 5 --log baseline.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 17172   running for 02:11:20   in /workspace/projects/02-kernel-agent
+pid 17172   running for 02:12:23   in /workspace/projects/02-kernel-agent
    options: --all --rounds 8 --samples 4 --context 8192 --repeat 5 --log baseline.jsonl
    its log was DELETED while it runs; reading the open handle, copy kept in /root/seat17/projects/02-kernel-agent/rescued/17172-baseline.jsonl
-   log /workspace/projects/02-kernel-agent/baseline.jsonl: 336 attempts, 84 rounds done; now on run 4 of 5, level 3, round 0 (up to 8 rounds a level)
+   log /workspace/projects/02-kernel-agent/baseline.jsonl: 340 attempts, 85 rounds done; now on run 4 of 5, level 3, round 1 (up to 8 rounds a level)
    run 1: rounds per level L1=8, L2=1, L3=6, L4=6
    run 2: rounds per level L1=8, L2=7, L3=5, L4=5
    run 3: rounds per level L1=8, L2=1, L3=7, L4=8
-   run 4: rounds per level L1=8, L2=5, L3=1
+   run 4: rounds per level L1=8, L2=5, L3=2
    feedback mode in its records: located; code: 30697d7
