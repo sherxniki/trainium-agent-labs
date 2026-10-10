@@ -95,3 +95,7 @@ round 2: this round 0.50  best so far 0.50  (46.9s)
   at index (24, 9): expected +2.62617, got -1.9109
   81.8% of elements are outside tolerance
   most elements are wrong, so this is the core arithmetic or the operand layout, not an edge case Nothing is computed in this task: the correct output holds exactly the values of
+round 3: same failure again (0.50, best so far 0.50)
+  same failure 2x — adding a ledger of 3 failed attempts to break the repeat
+round 4: same failure again (0.50, best so far 0.50)
+  same failure 3x — adding a ledger of 3 failed attempts to break the repeat
