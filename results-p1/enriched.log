@@ -20,3 +20,5 @@ round 2: this round 0.30  best so far 0.30  (61.6s)
   0 of 1 shapes passed. On K=128 M=64 N=512: raised ValueError: cannot reshape array of size 32768 into shape (1,64) Do not reshape. Work with the shapes you were given and slice them into tiles, e.g. src=a[0:128, 0:64].
 round 3: same failure again (0.30, best so far 0.30)
   same failure 2x — adding a ledger of 2 failed attempts to break the repeat
+round 4: same failure again (0.30, best so far 0.30)
+  same failure 3x — adding a ledger of 2 failed attempts to break the repeat
