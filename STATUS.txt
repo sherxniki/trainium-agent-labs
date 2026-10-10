@@ -1,7 +1,19 @@
-seat seat-17   2026-10-10T19:31:42Z   code 8d6932b Kernel agent: interim note corrected with the five-repeat loca
-busy: no   started on this seat: 
+seat seat-17   2026-10-10T19:32:45Z   code 8d6932b Kernel agent: interim note corrected with the five-repeat loca
+busy: yes   started on this seat: 200-pair1.job 
+
+==================== results-p1 ====================
+--- feedback = directed3 ---
+=========== level 2: 2D transpose ===========
+round 0: this round 0.30  best so far 0.30  (47.8s)
+##### feedback=directed3 started 19:31:45
 
 ==================== processes ====================
+29949 bash /root/seat17/projects/02-kernel-agent/go.sh _run
+29955 python agent.py --levels 2,3,4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed3 --log results-p1/directed3.jsonl
 
 ==================== agents on this chip: how far along ====================
-none
+pid 29955   running for 01:00   in /root/seat17/projects/02-kernel-agent
+   options: --levels 2,3,4 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed3 --log results-p1/directed3.jsonl
+   log /root/seat17/projects/02-kernel-agent/results-p1/directed3.jsonl: 4 attempts, 1 rounds done; now on run 1 of 1, level 2, round 0 (up to 8 rounds a level)
+   run 1: rounds per level L2=1
+   feedback mode in its records: directed3; code: 8d6932b

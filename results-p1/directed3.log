@@ -1,0 +1,5 @@
+endpoint http://localhost:8000/v1  model Qwen/Qwen3-8B  feedback directed3  diverse False  commit 8d6932b  session 20261010-193145
+
+=========== level 2: 2D transpose ===========
+round 0: this round 0.30  best so far 0.30  (47.8s)
+  0 of 4 shapes passed. On shape=(32, 12) as 3x4: raised AssertionError: dma_copy requires src and dst to have the same number of elements, got src=384, dst=512 The destination has shape (128, 4) but the piece copied into it has shape (32, 12), which is smaller. nisa.dma_copy needs IDENTICAL shapes and cannot fill part of a tile. Allocate a separate tile for this copy with exactly the source's shape
