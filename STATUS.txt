@@ -1,5 +1,5 @@
-seat seat-17   2026-10-10T20:07:09Z   code 61574a1 Kernel agent: probe 1 runs level 3 first, so its answer comes 
-busy: no   started on this seat: 200-pair1.job 
+seat seat-17   2026-10-10T20:08:12Z   code 61574a1 Kernel agent: probe 1 runs level 3 first, so its answer comes 
+busy: yes   started on this seat: 200-pair1.job 205-probe1.job 
 
 ==================== results-p1 ====================
 --- feedback = directed3 ---
@@ -60,8 +60,20 @@ round 3: same failure again (0.62, best so far 0.62)
 ##### feedback=enriched finished 20:05:30 (exit 0)
 ##### ALL DONE 20:05:30
 
+==================== results-probe1 ====================
+--- feedback = directed4 ---
+=========== level 3: matmul, single tile ===========
+round 0: this round 0.30  best so far 0.30  (57.3s)
+##### feedback=directed4 started 20:07:12
+
 ==================== processes ====================
 33046 watch -n 60 pgrep -af "agent.py" | grep -o "log lf_[a-z]*" ; wc -l lf_plain.jsonl lf_verify.jsonl 2>/dev/null
+33219 bash /root/seat17/projects/02-kernel-agent/go.sh _run
+33225 python agent.py --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.jsonl
 
 ==================== agents on this chip: how far along ====================
-none
+pid 33225   running for 01:00   in /root/seat17/projects/02-kernel-agent
+   options: --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.json
+   log /root/seat17/projects/02-kernel-agent/results-probe1/directed4.jsonl: 4 attempts, 1 rounds done; now on run 1 of 1, level 3, round 0 (up to 8 rounds a level)
+   run 1: rounds per level L3=1
+   feedback mode in its records: directed4; code: 61574a1
