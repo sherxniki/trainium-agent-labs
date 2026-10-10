@@ -13,3 +13,5 @@ round 4: this round 0.30  best so far 0.75  (111.3s)
   0 of 4 shapes passed. On K=128 M=128 N=512: raised AssertionError: tensor_copy dst must be in ['sbuf', 'psum'], got shared_hbm `nisa.tensor_copy` only moves data between on-chip buffers, sbuf and psum. To reach HBM -- the tensor you allocated with buffer=nl.shared_hbm and will return -- use nisa.dma_copy instead. The usual sequence is nc_matmul into psum, tensor_copy psum to sbuf, then dma_copy sb
 round 5: this round 0.30  best so far 0.75  (112.9s)
   0 of 4 shapes passed. On K=128 M=128 N=512: raised AssertionError: dma_copy requires HBM or SBUF tensors, got src=MemoryRegion.psum, dst=MemoryRegion.shared_hbm The failing line is line 53 of your kernel: `nisa.dma_copy(dst=out[m0:m0+chunk_M, n0:n0+chunk_N], src=psum)`. That is the line to change. For reference, the real signature is nisa.dma_copy(dst: 'NkiTensor', src: 'NkiTensor', priority=None,
+round 6: same failure again (0.30, best so far 0.75)
+  same failure 2x — adding a ledger of 6 failed attempts to break the repeat
