@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T20:08:12Z   code 61574a1 Kernel agent: probe 1 runs level 3 first, so its answer comes 
+seat seat-17   2026-10-10T20:09:15Z   code 61574a1 Kernel agent: probe 1 runs level 3 first, so its answer comes 
 busy: yes   started on this seat: 200-pair1.job 205-probe1.job 
 
 ==================== results-p1 ====================
@@ -64,6 +64,7 @@ round 3: same failure again (0.62, best so far 0.62)
 --- feedback = directed4 ---
 =========== level 3: matmul, single tile ===========
 round 0: this round 0.30  best so far 0.30  (57.3s)
+round 1: this round 0.30  best so far 0.30  (39.7s)
 ##### feedback=directed4 started 20:07:12
 
 ==================== processes ====================
@@ -72,8 +73,8 @@ round 0: this round 0.30  best so far 0.30  (57.3s)
 33225 python agent.py --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 33225   running for 01:00   in /root/seat17/projects/02-kernel-agent
+pid 33225   running for 02:02   in /root/seat17/projects/02-kernel-agent
    options: --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.json
-   log /root/seat17/projects/02-kernel-agent/results-probe1/directed4.jsonl: 4 attempts, 1 rounds done; now on run 1 of 1, level 3, round 0 (up to 8 rounds a level)
-   run 1: rounds per level L3=1
+   log /root/seat17/projects/02-kernel-agent/results-probe1/directed4.jsonl: 8 attempts, 2 rounds done; now on run 1 of 1, level 3, round 1 (up to 8 rounds a level)
+   run 1: rounds per level L3=2
    feedback mode in its records: directed4; code: 61574a1
