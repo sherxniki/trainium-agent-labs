@@ -1,0 +1,5 @@
+endpoint http://localhost:8000/v1  model Qwen/Qwen3-8B  feedback directed5  diverse False  commit d9bc47f  session 20261010-205002
+
+=========== level 3: matmul, single tile ===========
+round 0: this round 0.30  best so far 0.30  (57.9s)
+  0 of 1 shapes passed. On K=128 M=64 N=512: raised AssertionError: dma_copy requires src and dst to have the same number of elements, got src=8192, dst=65536 The destination has shape (128, 512) but the piece copied into it has shape (128, 64), which is smaller. nisa.dma_copy needs IDENTICAL shapes and cannot fill part of a tile. Allocate a separate tile for this copy with exactly the source's shap
