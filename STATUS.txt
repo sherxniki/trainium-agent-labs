@@ -1,0 +1,10 @@
+seat seat-36   2026-10-10T20:41:27Z   code 82f0a30 Kernel agent: a second seat gets its own queue and results bra
+busy: yes   started on this seat: 
+
+==================== processes ====================
+45743 python agent.py --levels 1-10 --out runs/H_restarts
+
+==================== agents on this chip: how far along ====================
+pid 45743   running for 07:59   in /workspace/projects/02-kernel-agent/stage_a
+   options: --levels 1-10 --out runs/H_restarts
+   no --log option, so its progress cannot be read
