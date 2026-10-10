@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T20:16:33Z   code 61574a1 Kernel agent: probe 1 runs level 3 first, so its answer comes 
+seat seat-17   2026-10-10T20:17:36Z   code 6d37e17 Kernel agent: directed5 reports every fault it can see in the 
 busy: yes   started on this seat: 200-pair1.job 205-probe1.job 
 
 ==================== results-p1 ====================
@@ -73,6 +73,7 @@ round 4: same failure again (0.30, best so far 0.30)
 round 0: this round 0.62  best so far 0.62  (80.0s)
 round 1: this round 0.62  best so far 0.62  (88.9s)
 round 2: this round 0.50  best so far 0.62  (96.8s)
+round 3: this round 0.75  best so far 0.75  (96.3s)
 ##### feedback=directed4 started 20:07:12
 
 ==================== processes ====================
@@ -81,8 +82,8 @@ round 2: this round 0.50  best so far 0.62  (96.8s)
 33225 python agent.py --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 33225   running for 09:20   in /root/seat17/projects/02-kernel-agent
+pid 33225   running for 10:23   in /root/seat17/projects/02-kernel-agent
    options: --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.json
-   log /root/seat17/projects/02-kernel-agent/results-probe1/directed4.jsonl: 32 attempts, 8 rounds done; now on run 1 of 1, level 4, round 2 (up to 8 rounds a level)
-   run 1: rounds per level L3=5, L4=3
+   log /root/seat17/projects/02-kernel-agent/results-probe1/directed4.jsonl: 36 attempts, 9 rounds done; now on run 1 of 1, level 4, round 3 (up to 8 rounds a level)
+   run 1: rounds per level L3=5, L4=4
    feedback mode in its records: directed4; code: 61574a1
