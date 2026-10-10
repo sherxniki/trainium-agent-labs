@@ -1,0 +1,5 @@
+seat seat-17   2026-10-10T18:06:36Z   code b543904 Kernel agent: queue the runs lost on the seat; fuller status s
+busy: yes   started on this seat: 
+
+==================== processes ====================
+17172 python agent.py --all --rounds 8 --samples 4 --context 8192 --repeat 5 --log baseline.jsonl
