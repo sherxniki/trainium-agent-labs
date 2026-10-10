@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T20:18:38Z   code 6d37e17 Kernel agent: directed5 reports every fault it can see in the 
+seat seat-17   2026-10-10T20:19:41Z   code 6d37e17 Kernel agent: directed5 reports every fault it can see in the 
 busy: yes   started on this seat: 200-pair1.job 205-probe1.job 
 
 ==================== results-p1 ====================
@@ -74,6 +74,10 @@ round 0: this round 0.62  best so far 0.62  (80.0s)
 round 1: this round 0.62  best so far 0.62  (88.9s)
 round 2: this round 0.50  best so far 0.62  (96.8s)
 round 3: this round 0.75  best so far 0.75  (96.3s)
+round 4: this round 1.00  best so far 1.00  (110.5s)
+  SOLVED on round 4. Correct on every shape. MEMORY BOUND: 73.1 Flops/Byte against a ridge of 222, so 33% of w
+=========== level 2: 2D transpose ===========
+round 0: this round 0.30  best so far 0.30  (46.0s)
 ##### feedback=directed4 started 20:07:12
 
 ==================== processes ====================
@@ -82,8 +86,9 @@ round 3: this round 0.75  best so far 0.75  (96.3s)
 33225 python agent.py --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 33225   running for 11:25   in /root/seat17/projects/02-kernel-agent
+pid 33225   running for 12:28   in /root/seat17/projects/02-kernel-agent
    options: --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.json
-   log /root/seat17/projects/02-kernel-agent/results-probe1/directed4.jsonl: 36 attempts, 9 rounds done; now on run 1 of 1, level 4, round 3 (up to 8 rounds a level)
-   run 1: rounds per level L3=5, L4=4
+   log /root/seat17/projects/02-kernel-agent/results-probe1/directed4.jsonl: 44 attempts, 11 rounds done; now on run 2 of 1, level 2, round 0 (up to 8 rounds a level)
+   run 1: rounds per level L3=5, L4=5
+   run 2: rounds per level L2=1
    feedback mode in its records: directed4; code: 61574a1

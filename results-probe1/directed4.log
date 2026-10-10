@@ -23,3 +23,65 @@ round 2: this round 0.50  best so far 0.62  (96.8s)
   0 of 4 shapes passed. On K=128 M=128 N=512: NON-FINITE OUTPUT: 65536 NaN and 0 Inf, first at (0, 0). Every one of the 65536 output elements is NaN. Your kernel passes accumulate=True to nisa.nc_matmul. Remove that argument. With it the result here is NaN: a newly allocated psum tile holds NaN, and the product is added to it. Without it, calling nisa.nc_matmul into the same psum tile once per chunk
 round 3: this round 0.75  best so far 0.75  (96.3s)
   2 of 4 shapes passed. On K=256 M=256 N=1024: raised AssertionError: Matmul stationary free dimension 256 exceeds gemm_stationary_fmax=128 One nisa.nc_matmul call accepts at most 128 on the stationary operand's free dimension (M) and at most 512 on the moving operand's free dimension (N); you passed 256 on the stationary one. Keep your loop over K as it is and add loops over the output: split M int
+round 4: this round 1.00  best so far 1.00  (110.5s)
+  Correct on every shape. MEMORY BOUND: 73.1 Flops/Byte against a ridge of 222, so 33% of what the engine could sustain. The engine is idle waiting for data. Find reuse -- make the same bytes do more work -- rather than tuning the arithmetic. 3.0x more reuse needed.
+  SOLVED on round 4. Correct on every shape. MEMORY BOUND: 73.1 Flops/Byte against a ridge of 222, so 33% of what the engine could sustain. The engine is idle waiting for data. Find reuse -- make the same bytes do more work -- rather than tuning the arithmetic. 3.0x more reuse needed.
+  ---------------- the kernel ----------------
+  import nki
+  import nki.isa as nisa
+  import nki.language as nl
+
+  @nki.jit
+  def nki_matmul_tiled_(lhsT, rhs):
+      M = lhsT.shape[1]
+      N = rhs.shape[1]
+      K = lhsT.shape[0]
+    
+      # Allocate output buffer in shared HBM
+      out = nl.ndarray((M, N), dtype=lhsT.dtype, buffer=nl.shared_hbm)
+    
+      # Allocate SBUF for stationary and moving operands
+      sbuf_stationary = nl.ndarray((K, M), dtype=lhsT.dtype, buffer=nl.sbuf)
+      sbuf_moving = nl.ndarray((K, N), dtype=rhs.dtype, buffer=nl.sbuf)
+    
+      # Copy lhsT to sbuf_stationary in chunks of 128
+      for i in nl.affine_range(0, K, 128):
+          chunk_size = min(128, K - i)
+          nisa.dma_copy(dst=sbuf_stationary[i:i+chunk_size, :], src=lhsT[i:i+chunk_size, :])
+    
+      # Copy rhs to sbuf_moving in chunks of 128
+      for i in nl.affine_range(0, K, 128):
+          chunk_size = min(128, K - i)
+          nisa.dma_copy(dst=sbuf_moving[i:i+chunk_size, :], src=rhs[i:i+chunk_size, :])
+    
+      # Split M into chunks of at most 128 and N into chunks of at most 512
+      for m0 in nl.affine_range(0, M, 128):
+          for n0 in nl.affine_range(0, N, 512):
+              chunk_m = min(128, M - m0)
+              chunk_n = min(512, N - n0)
+            
+              # Allocate PSUM buffer for current chunk
+              psum = nl.ndarray((chunk_m, chunk_n), dtype=nl.float32, buffer=nl.psum)
+            
+              # Perform NC matmul in chunks of 128
+              for i in nl.affine_range(0, K, 128):
+                  chunk_size = min(128, K - i)
+                  nisa.nc_matmul(
+                      dst=psum,
+                      stationary=sbuf_stationary[i:i+chunk_size, m0:m0+chunk_m],
+                      moving=sbuf_moving[i:i+chunk_size, n0:n0+chunk_n]
+                  )
+            
+              # Copy result from PSUM to SBUF
+              sbuf_out = nl.ndarray((chunk_m, chunk_n), dtype=lhsT.dtype, buffer=nl.sbuf)
+              nisa.tensor_copy(dst=sbuf_out, src=psum)
+            
+              # Copy result from SBUF to shared HBM
+              nisa.dma_copy(dst=out[m0:m0+chunk_m, n0:n0+chunk_n], src=sbuf_out)
+    
+      return out
+  -------------------------------------------
+
+=========== level 2: 2D transpose ===========
+round 0: this round 0.30  best so far 0.30  (46.0s)
+  0 of 4 shapes passed. On shape=(32, 12) as 3x4: raised AssertionError: dma_copy requires src and dst to have the same number of elements, got src=384, dst=512 The destination has shape (128, 4) but the piece copied into it has shape (32, 12), which is smaller. nisa.dma_copy needs IDENTICAL shapes and cannot fill part of a tile. Allocate a separate tile for this copy with exactly the source's shape
