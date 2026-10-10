@@ -1,10 +1,10 @@
-seat seat-36   2026-10-10T20:51:52Z   code d9bc47f Kernel agent: on the second seat, the level 3 attempt runs sec
+seat seat-36   2026-10-10T20:52:55Z   code b7d2601 Kernel agent: directed5 answers 'dma_copy requires HBM or SBUF
 busy: yes   started on this seat: 
 
 ==================== processes ====================
 51414 python agent.py --levels 1-10 --out runs/J_final
 
 ==================== agents on this chip: how far along ====================
-pid 51414   running for 05:40   in /workspace/projects/02-kernel-agent/stage_a
+pid 51414   running for 06:43   in /workspace/projects/02-kernel-agent/stage_a
    options: --levels 1-10 --out runs/J_final
    no --log option, so its progress cannot be read
