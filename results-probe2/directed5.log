@@ -15,3 +15,8 @@ round 5: same failure again (0.30, best so far 0.30)
   same failure 2x — adding a ledger of 5 failed attempts to break the repeat
 round 6: same failure again (0.30, best so far 0.30)
   same failure 3x — adding a ledger of 5 failed attempts to break the repeat
+round 7: this round 0.30  best so far 0.30  (56.0s)
+  0 of 1 shapes passed. On K=128 M=64 N=512: raised AssertionError: dma_copy requires HBM or SBUF tensors, got src=MemoryRegion.psum, dst=MemoryRegion.shared_hbm The failing line is line 22 of your kernel: `nisa.dma_copy(dst=out, src=psum_tile)`. That is the line to change. For reference, the real signature is nisa.dma_copy(dst: 'NkiTensor', src: 'NkiTensor', priority=None, oob_mode=<oob_mode.error:
+  not solved in 8 rounds; best reward 0.30
+
+=========== level 4: matmul, tiled ===========
