@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T20:13:25Z   code 61574a1 Kernel agent: probe 1 runs level 3 first, so its answer comes 
+seat seat-17   2026-10-10T20:14:27Z   code 61574a1 Kernel agent: probe 1 runs level 3 first, so its answer comes 
 busy: yes   started on this seat: 200-pair1.job 205-probe1.job 
 
 ==================== results-p1 ====================
@@ -71,6 +71,7 @@ round 4: same failure again (0.30, best so far 0.30)
   STOPPING this level: the identical failure 4 rounds running. The agent is cycling between a fixed set of mis
 =========== level 4: matmul, tiled ===========
 round 0: this round 0.62  best so far 0.62  (80.0s)
+round 1: this round 0.62  best so far 0.62  (88.9s)
 ##### feedback=directed4 started 20:07:12
 
 ==================== processes ====================
@@ -79,8 +80,8 @@ round 0: this round 0.62  best so far 0.62  (80.0s)
 33225 python agent.py --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 33225   running for 06:12   in /root/seat17/projects/02-kernel-agent
+pid 33225   running for 07:15   in /root/seat17/projects/02-kernel-agent
    options: --levels 3,4,2 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed4 --log results-probe1/directed4.json
-   log /root/seat17/projects/02-kernel-agent/results-probe1/directed4.jsonl: 24 attempts, 6 rounds done; now on run 1 of 1, level 4, round 0 (up to 8 rounds a level)
-   run 1: rounds per level L3=5, L4=1
+   log /root/seat17/projects/02-kernel-agent/results-probe1/directed4.jsonl: 28 attempts, 7 rounds done; now on run 1 of 1, level 4, round 1 (up to 8 rounds a level)
+   run 1: rounds per level L3=5, L4=2
    feedback mode in its records: directed4; code: 61574a1
