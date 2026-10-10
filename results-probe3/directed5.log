@@ -13,3 +13,5 @@ round 4: this round 0.30  best so far 0.30  (67.2s)
   0 of 1 shapes passed. On K=128 M=64 N=512: raised AssertionError: dma_copy requires src and dst to have the same number of elements, got src=32768, dst=64 The destination has shape (64,) but the piece copied into it has shape (64, 512), which is larger. nisa.dma_copy needs IDENTICAL shapes. If the source is the whole result, the destination was allocated too small: allocate it with shape (64, 512)
 round 5: this round 0.30  best so far 0.30  (57.0s)
   0 of 1 shapes passed. On K=128 M=64 N=512: raised AssertionError: dma_copy requires HBM or SBUF tensors, got src=MemoryRegion.psum, dst=MemoryRegion.shared_hbm The failing line is line 22 of your kernel: `nisa.dma_copy(dst=out, src=psum_tile)`. That is the line to change. For reference, the real signature is nisa.dma_copy(dst: 'NkiTensor', src: 'NkiTensor', priority=None, oob_mode=<oob_mode.error:
+round 6: same failure again (0.30, best so far 0.30)
+  same failure 2x — adding a ledger of 6 failed attempts to break the repeat
