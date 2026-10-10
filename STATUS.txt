@@ -1,4 +1,4 @@
-seat seat-17   2026-10-10T20:59:23Z   code fd3ec0e Kernel agent: one more level 3 attempt, now that the last faul
+seat seat-17   2026-10-10T21:00:25Z   code fd3ec0e Kernel agent: one more level 3 attempt, now that the last faul
 busy: yes   started on this seat: 200-pair1.job 205-probe1.job 206-probe2.job 2065-confirm4a.job 20655-probe3.job 20656-probe5.job 
 
 ==================== results-c4a ====================
@@ -149,6 +149,7 @@ round 7: same failure again (0.30, best so far 0.30)
 ==================== results-probe5 ====================
 --- feedback = directed5 ---
 =========== level 3: matmul, single tile ===========
+round 0: this round 0.30  best so far 0.30  (71.3s)
 ##### feedback=directed5 started 20:58:23
 
 ==================== processes ====================
@@ -156,6 +157,8 @@ round 7: same failure again (0.30, best so far 0.30)
 39535 python agent.py --levels 3 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed5 --log results-probe5/directed5.jsonl
 
 ==================== agents on this chip: how far along ====================
-pid 39535   running for 01:00   in /root/seat17/projects/02-kernel-agent
+pid 39535   running for 02:02   in /root/seat17/projects/02-kernel-agent
    options: --levels 3 --rounds 8 --samples 4 --context 8192 --repeat 1 --feedback directed5 --log results-probe5/directed5.jsonl
-   log /root/seat17/projects/02-kernel-agent/results-probe5/directed5.jsonl: empty so far
+   log /root/seat17/projects/02-kernel-agent/results-probe5/directed5.jsonl: 4 attempts, 1 rounds done; now on run 1 of 1, level 3, round 0 (up to 8 rounds a level)
+   run 1: rounds per level L3=1
+   feedback mode in its records: directed5; code: fd3ec0e
